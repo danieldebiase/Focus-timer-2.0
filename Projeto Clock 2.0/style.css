@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fff;
+  --bg-card-regular: #e1e1e6;
+  --bg-card-active: #02799d;
+
+  --ff-regular: #323238;
+  --ff-secondary: #323238;
+  --ff-slider: #323238;
+  --ff-active: #fff;
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  color: var(--ff-regular);
+  background-color: var(--bg-color);
+
+  transition: all 0.3s;
+
+}
+
+.hide {
+  display: none;
+}
+
+.timer span {
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  letter-spacing: 0;
+
+  color: var(--ff-secondary);
+}
+
+.painel {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 19.5rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 1.8rem;
+}
+
+.controls button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.sound-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#cima {
+  display: flex;
+  column-gap: 3.2rem;
+}
+#baixo {
+  display: flex;
+  column-gap: 3.2rem;
+}
+
+.sound-cards button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: none;
+  border-radius: 2.4rem;
+  background-color: var(--bg-card-regular);
+
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.sound-cards button:hover {
+  filter: brightness(0.9);
+}
+
+.sound-cards button:active {
+  filter: brightness(0.95);
+}
+
+path {
+  fill: var(--ff-regular);
+  
+  transition: all 0.1s;
+}
+
+/* ANIMATION */
+
+.anima {
+  animation-name: anima;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anima {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
